@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Make Trump Tolerable Again",
+  "version": "1.0",
+  "description": "Replaces the text 'Donald Trump' with little nicknames I have found.",
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*" ],
+      "js": [ "content_script.js" ],
+      "run_at": "document_end"
+    }
+  ]
+}
+
