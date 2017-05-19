@@ -1,5 +1,6 @@
 walk(document.body);
 
+
 function walk(node) 
 {
 	// I stole this function from here:
@@ -7,10 +8,8 @@ function walk(node)
 	
 	var child, next;
 	
-	if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
-	    || node.classList.indexOf('ace_editor') > -1) {
-		return;
-	}
+	if (node.nodeName.toLowerCase() == 'input' || node.nodeName.toLowerCase() == 'textarea' || (node.classList && node.classList.contains('ace_editor'))) { return; }
+
 
 	switch ( node.nodeType )  
 	{
@@ -40,7 +39,12 @@ function handleText(textNode)
 	v = v.replace(/\bdonald Trump\b/g, "Hair Furher");
 	v = v.replace(/\bDonald trump\b/g, "Tangerine Cockholster");
 	v = v.replace(/\bDonald Trump\b/g, "Cheeto-In-Chief");
-	
+	v = v.replace(/\bDonald John Trump\b/g, "The Angry Orange Creamsicle");
+	v = v.replace(/\bDonald J Trump\b/g, "Mango Mussolini");
+	v = v.replace(/\bDonald J. Trump\b/g, "Fuckface Von Clownstick");
+	v = v.replace(/\bTrump\b/g, "Tiny Hands");
+	v = v.replace(/\bPresident Trump\b/g, "President Cock Holster");
+
 	textNode.nodeValue = v;
 }
 

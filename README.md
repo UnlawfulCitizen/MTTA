@@ -4,7 +4,7 @@
 
 ![](logo.png)
 
-Chrome extension that replaces occurrences of Donald Trump with random insults.
+Replaces occurrences of Donald Trump with more fun names.
 
 
 
